@@ -1,16 +1,17 @@
 package main
 
 import (
-	"github.com/owenliang/go-push/gateway"
+	"flag"
 	"fmt"
 	"os"
-	"flag"
 	"runtime"
 	"time"
+
+	"github.com/TPZJJ612/push_highconcurrence_go/gateway"
 )
 
 var (
-	confFile string		// 配置文件路径
+	confFile string // 配置文件路径
 )
 
 func initArgs() {
@@ -22,7 +23,7 @@ func initEnv() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 }
 
-func main()  {
+func main() {
 	var (
 		err error
 	)
